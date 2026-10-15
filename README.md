@@ -96,6 +96,10 @@ Nach erfolgreichem Build stehen im Verzeichnis:
 
 Das Programm gibt bei erfolgreicher Übergabe an den MAPI-Spooler `0` zurück. Bei Fehlern wird der MAPI-Fehlercode ausgegeben (z. B. `1` für `MAPI_USER_ABORT`, wenn der Benutzer das Fenster abbricht/schließt).
 
+### Credits
+
+Sowohl der Quellcode dieses Programms als auch das Anwendungs-Icon wurden mithilfe von **Google Gemini** generiert.
+
 ---
 
 <a name="english"></a>
@@ -190,3 +194,8 @@ After building, two executables will be available:
 
 - Returns `0` (`SUCCESS_SUCCESS`) when successfully handed over to the MAPI subsystem.
 - In case of failure or cancellation, the MAPI error code is printed (e.g., `1` for `MAPI_USER_ABORT` when the user closes the compose window without sending).
+
+### Credits
+
+Both the source code of this tool and the application icon were generated using **Google Gemini**.
+
