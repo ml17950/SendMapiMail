@@ -38,14 +38,14 @@ Windows-MAPI-Aufrufe (`mapi32.dll`) erfordern, dass die Bittiefe der aufrufenden
 ### Syntax
 
 ```cmd
-SendMapiMail32.exe <Dateipfad> [Empfaenger] [Betreff]
+SendMapiMail32.exe <Dateipfad> [Betreff] [Empfaenger]
 ```
 *(bzw. `SendMapiMail64.exe` bei 64-Bit-Mailclients)*
 
 #### Parameter:
 - `<Dateipfad>` *(erforderlich)*: Vollständiger oder relativer Pfad zur anzuhängenden Datei. Pfade mit Leerzeichen müssen in Anführungszeichen gesetzt werden.
-- `[Empfaenger]` *(optional)*: E-Mail-Adresse des Empfängers.
 - `[Betreff]` *(optional)*: Betreffzeile der E-Mail.
+- `[Empfaenger]` *(optional)*: E-Mail-Adresse des Empfängers.
 
 ### Anwendungsbeispiele
 
@@ -54,19 +54,19 @@ SendMapiMail32.exe <Dateipfad> [Empfaenger] [Betreff]
 SendMapiMail32.exe "C:\Dokumente\Rechnung_12345.pdf"
 ```
 
-#### 2. Anhang und Empfänger:
+#### 2. Anhang und Betreff:
 ```cmd
-SendMapiMail32.exe "C:\Dokumente\Bericht.xlsx" "kunde@beispiel.de"
+SendMapiMail32.exe "C:\Dokumente\Bericht.xlsx" "Monatsbericht"
 ```
 
-#### 3. Anhang, Empfänger und Betreff:
+#### 3. Anhang, Betreff und Empfänger:
 ```cmd
-SendMapiMail32.exe "C:\Dokumente\Angebot.pdf" "vertrieb@firma.de" "Angebot Nr. 2026-04"
+SendMapiMail32.exe "C:\Dokumente\Angebot.pdf" "Angebot Nr. 2026-04" "vertrieb@firma.de"
 ```
 
 #### 4. Aufruf aus PowerShell:
 ```powershell
-Start-Process -FilePath ".\SendMapiMail32.exe" -ArgumentList '"C:\Temp\Log.txt"', '"admin@firma.local"', '"Systembericht"'
+Start-Process -FilePath ".\SendMapiMail32.exe" -ArgumentList '"C:\Temp\Log.txt"', '"Systembericht"', '"admin@firma.local"'
 ```
 
 ### Kompilierung / Build
