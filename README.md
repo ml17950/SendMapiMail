@@ -132,14 +132,14 @@ Windows MAPI calls (`mapi32.dll`) require the bitness of the calling executable 
 ### Syntax
 
 ```cmd
-SendMapiMail32.exe <FilePath> [Recipient] [Subject]
+SendMapiMail32.exe <FilePath> [Subject] [Recipient]
 ```
 *(or `SendMapiMail64.exe` for 64-bit email clients)*
 
 #### Arguments:
 - `<FilePath>` *(required)*: Absolute or relative path to the file to attach. Enclose paths with spaces in double quotes.
-- `[Recipient]` *(optional)*: Recipient email address.
 - `[Subject]` *(optional)*: Subject text of the email.
+- `[Recipient]` *(optional)*: Recipient email address.
 
 ### Usage Examples
 
@@ -148,19 +148,19 @@ SendMapiMail32.exe <FilePath> [Recipient] [Subject]
 SendMapiMail32.exe "C:\Documents\Invoice_12345.pdf"
 ```
 
-#### 2. Attachment and recipient:
+#### 2. Attachment and subject:
 ```cmd
-SendMapiMail32.exe "C:\Documents\Report.xlsx" "customer@example.com"
+SendMapiMail32.exe "C:\Documents\Report.xlsx" "Monthly Report"
 ```
 
-#### 3. Attachment, recipient, and subject:
+#### 3. Attachment, subject, and recipient:
 ```cmd
-SendMapiMail32.exe "C:\Documents\Quote.pdf" "sales@company.com" "Quote #2026-04"
+SendMapiMail32.exe "C:\Documents\Quote.pdf" "Quote #2026-04" "sales@company.com"
 ```
 
 #### 4. Calling from PowerShell:
 ```powershell
-Start-Process -FilePath ".\SendMapiMail32.exe" -ArgumentList '"C:\Temp\Log.txt"', '"admin@company.local"', '"System Report"'
+Start-Process -FilePath ".\SendMapiMail32.exe" -ArgumentList '"C:\Temp\Log.txt"', '"System Report"', '"admin@company.local"'
 ```
 
 ### Building from Source
